@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Birds
 {
-    abstact class Bird
+    abstract class Bird
     {
         public double Weight { get; private set; }
         public double Length { get; private set; }
