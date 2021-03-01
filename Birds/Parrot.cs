@@ -6,14 +6,11 @@ namespace Birds
 {
     class Parrot : Bird, IFlying
     {
-        public string Colour { get; private set; }
+        public enum Colours { Red, Green, Blue, Other}
+        Colours Colour { get; set; }
 
-        public Parrot(double weight, double length, string colour) : base(weight, length)
+        public Parrot(double weight, double length, Colours colour) : base(weight, length)
         {
-            if(string.IsNullOrEmpty(colour))
-            {
-                throw new ArgumentException("Specify the colour.");
-            }
             Colour = colour;
         }
 
